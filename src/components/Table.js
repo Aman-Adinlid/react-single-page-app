@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const TableHeader = () => {
     return (
         <thead>
@@ -7,6 +8,8 @@ const TableHeader = () => {
                 <th>Category</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Info</th>
+
             </tr>
         </thead>
     );
@@ -19,6 +22,8 @@ const TableBody = props => {
                 <td>{tbl.category}</td>
                 <td>{tbl.name}</td>
                 <td>{tbl.price}</td>
+                <td> <button className="btn btn-info">Details</button></td>
+
 
             </tr>
         );
@@ -32,6 +37,7 @@ const Table = (props) => {
         <table border="1">
             <TableHeader />
             <TableBody tables={tables} />
+
         </table>
     );
 }
