@@ -3,6 +3,7 @@ import React from 'react';
 import Main from './components/Main';
 import Details from './components/Details';
 import Create from './components/Create';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const tables = [

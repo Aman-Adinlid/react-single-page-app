@@ -18,7 +18,7 @@ class Main extends Component {
     async componentDidMount() {
         await axios.get('https://mj-tg-productmanagement.herokuapp.com/api/category/')
             .then(response => {
-                this.setState({ categories: response.data });
+                this.setState({ showDetails: response.data });
             });
     }
     openDetails = (id) => {
@@ -40,7 +40,6 @@ class Main extends Component {
                     <Table tables={tables}
                     />
                     <Details showDetails={showDetails} />
-
                     <div>
                     </div>
 

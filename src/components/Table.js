@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const TableHeader = () => {
     return (
         <thead>
@@ -9,8 +7,7 @@ const TableHeader = () => {
                 <th>Category</th>
                 <th>Name</th>
                 <th>Price</th>
-
-
+                <th>Details</th>
             </tr>
         </thead>
     );
@@ -23,7 +20,7 @@ const TableBody = props => {
                 <td>{tbl.category}</td>
                 <td>{tbl.name}</td>
                 <td>{tbl.price}</td>
-                <td> <button className="btn btn-info">Details</button></td>
+                <td><button type="button" className="btn btn-primary" onClick={() => props.detailsTable(tbl.name)}>Details</button></td>
 
             </tr>
 
@@ -34,11 +31,11 @@ const TableBody = props => {
 }
 
 const Table = (props) => {
-    const { tables } = props;
+    const { tables, detailsTable } = props;
     return (
-        <table border="1">
+        <table className="table table-striped">
             <TableHeader />
-            <TableBody tables={tables} />
+            <TableBody tables={tables} detailsTable={detailsTable} />
         </table>
     );
 }

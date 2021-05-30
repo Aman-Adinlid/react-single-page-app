@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function Create(prop) {
     return (
 
@@ -9,6 +9,7 @@ function Create(prop) {
                 <option>"Sporting Goods"</option>
                 <option>"Game"</option>
                 <option>"Electronics"</option>
+
             </select>
             <form>
                 <input type="submit" value="Submit"></input>
